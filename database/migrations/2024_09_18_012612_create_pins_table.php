@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pins', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('shop');
+            $table->string('photo'); 
+            $table->string('mail');
+            $table->text('map_url');
             $table->timestamps();
         });
     }
