@@ -12,10 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // \App\Models\User::factory(10)->create();
 
-        // PinSeeder（シーダークラス）の呼び出し
-        if (config('app.env') == 'local') {
-            $this->call(PinSeeder::class);
-        }
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
