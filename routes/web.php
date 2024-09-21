@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PinController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\MapDrawingController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('pins', PinController::class)
+Route::resource('reports', ReportController::class)
     ->only(['index', 'create', 'store', 'show', 'edit', 'update']);
 
 Route::resource('maps', MapDrawingController::class)
