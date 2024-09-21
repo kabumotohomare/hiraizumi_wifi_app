@@ -11,7 +11,9 @@ class ReportController extends Controller
      */
     public function index()
     {
-        //
+        $reports = Report::all()->sortBy('created_at');
+
+        return view('reports.index', compact('reports'));
     }
 
     /**

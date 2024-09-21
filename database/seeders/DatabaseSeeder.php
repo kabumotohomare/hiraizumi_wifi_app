@@ -12,8 +12,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
-        // PinSeeder（シーダークラス）の呼び出し
         if (config('app.env') == 'local') {
             $this->call(ReportSeeder::class);
             $this->call(StatusSeeder::class);
